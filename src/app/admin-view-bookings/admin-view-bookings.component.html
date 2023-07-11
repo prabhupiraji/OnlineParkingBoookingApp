@@ -1,0 +1,52 @@
+<h3>View Boooking Details</h3>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>
+                UserName
+            </th>
+            <th>
+                UserId
+            </th>
+            <th>
+                ParkingDate
+            </th>
+            <th>
+                StartTime
+            </th>
+            <th>
+                EndTime
+            </th>
+            <th>
+                SlotName
+            </th>
+            <th>
+               BookingTime
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                ParkingCost
+            </th>
+        </tr>
+    </thead>
+    <tbody  *ngFor="let item of listdata">
+        <tr>
+
+            <td>{{user.name}}</td>
+            <td>{{user.id}}</td>
+            <td>{{item.parkingdate}}</td>
+
+            <td>{{item.parkingtime}}</td>
+            <td>{{item.parkingendTime}}</td>
+            <td>{{item.parkinghours}}</td>
+            
+            <td>{{item.slotname}}</td>
+            <td>{{item.bookingTime}}</td>
+            <td>{{item.costRupees}}</td>
+        </tr> 
+     </tbody> 
+</table>
+
+

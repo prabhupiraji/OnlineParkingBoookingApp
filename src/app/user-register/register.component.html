@@ -1,0 +1,55 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Register New User</h3>
+    <!-- <form (ngSubmit)> -->
+    <form (ngSubmit)="onSubmit()">
+    <div class="container">
+    
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" [(ngModel)]="usern.name" id="name"
+                name="employee_id"> 
+        </div>
+    
+        <div class="form-group">
+            <label>DateOfBirth</label>
+            <input type="date" class="form-control"[(ngModel)]="usern.dateOfBirth" id="dateOfBirth"
+                name="address">
+        </div>
+    
+        <div class="form-group">
+            <label>EmailId</label>
+            <input type="text" class="form-control" [(ngModel)]="usern.email" id="email"
+                name="location_id">
+        </div>
+    
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="text" class="form-control" [(ngModel)]="usern.gender" id="gender"
+                name="gender">
+        </div>
+    
+        <div class="form-group">
+            <label>PhoneNo</label>
+            <input type="text" class="form-control" [(ngModel)]="usern.phoneno" id="phoneno"
+              name="phone">
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <input type="text" class="form-control"[(ngModel)]="usern.adress" id="address"
+                name="alternate_phone">
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="text" class="form-control" [(ngModel)]="usern.password" id="password"
+         name="gender">
+        </div>
+
+       
+
+        <button  class="btn btn-success" type="submit"> Submit </button>
+    </div>    
+    </form>
+    </div>
+
