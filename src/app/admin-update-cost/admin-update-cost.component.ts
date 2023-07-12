@@ -20,14 +20,15 @@ export class AdminUpdateCostComponent {
   constructor(private router: Router,private service:AdminService,private route: ActivatedRoute) { }
  
   onSubmit(){
-    // Navigating to the 'dashboard' route
-    // this.router.navigate(['/admin']);
+   
     console.log(this.admin_id);
-    
-    this.service.updateAdmin(this.admin_id, this.admindata);
+      this.service.updateAdmin(this.admin_id,this.admindata).subscribe(() => {
+        // this.goToEmployeeList();
+      }, error => console.log(error));
+    }
+  
   }
   
     
   
 
-}

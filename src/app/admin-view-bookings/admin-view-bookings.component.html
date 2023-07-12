@@ -2,9 +2,9 @@
 <table class = "table table-striped">
     <thead>
         <tr>
-            <th>
+            <!-- <th>
                 UserName
-            </th>
+            </th> -->
             <th>
                 UserId
             </th>
@@ -18,13 +18,15 @@
                 EndTime
             </th>
             <th>
+                Parkinghours
+            </th>
+            <th>
                 SlotName
             </th>
             <th>
                BookingTime
             </th>
-            <th>
-                
+            <th>     
             </th>
             <th>
                 ParkingCost
@@ -32,16 +34,13 @@
         </tr>
     </thead>
     <tbody  *ngFor="let item of listdata">
-        <tr>
-
-            <td>{{user.name}}</td>
-            <td>{{user.id}}</td>
+        <tr>  
+            <!-- <td>{{item.UserModel.UserName}}</td> -->
+            <td>{{item.id}}</td>
             <td>{{item.parkingdate}}</td>
-
             <td>{{item.parkingtime}}</td>
             <td>{{item.parkingendTime}}</td>
             <td>{{item.parkinghours}}</td>
-            
             <td>{{item.slotname}}</td>
             <td>{{item.bookingTime}}</td>
             <td>{{item.costRupees}}</td>

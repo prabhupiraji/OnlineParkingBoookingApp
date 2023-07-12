@@ -9,6 +9,7 @@ import { Adminmodel } from './adminmodel';
   providedIn: 'root'
 })
 export class AdminService {
+  baseURL="http://localhost:9086/admin";
  
   constructor(private httpClient: HttpClient) { }
   // private URL = "http://localhost:9086/admin";
@@ -18,20 +19,11 @@ export class AdminService {
     return this.httpClient.post<any>(`${"http://localhost:9086/admin/loginadmin"}`, null, { params });
   }
   
-  updateAdmin(admin_id:number, admin: Adminmodel){
-    const url = `${"http://localhost:9086/admin"}/${admin_id}`;
-
-    this.httpClient.put(url, admin).subscribe(
-      (response) => {
-        // Handle the successful update response here
-        console.log('Admin updated successfully', response);
-      },
-      (error) => {
-        // Handle the error response here
-        console.error('Error updating admin', error);
-      }
-    );
+  updateAdmin(admin_id: number, admindata: Adminmodel): Observable<Adminmodel>{
+   const url= `/admin/${admin_id}`
+    return this.httpClient.put<Adminmodel>(url, admindata);
   }
+
   }
 
   

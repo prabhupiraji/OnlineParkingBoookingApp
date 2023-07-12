@@ -2,6 +2,9 @@
 <table class = "table table-striped">
     <thead>
         <tr>
+            <th>
+                UserId
+            </th>
            
             <th>
                 ParkingDate
@@ -28,6 +31,7 @@
     </thead>
     <tbody *ngFor="let item of listdata">
         <tr>
+            <td>{{item.id}}</td>
             <td>{{item.parkingdate}}</td>
             <td>{{item.parkingtime}}</td>
             <td>{{item.parkingendTime}}</td>
