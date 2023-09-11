@@ -32,7 +32,7 @@ export class UserService {
   //   return this.httpClient.post<any>(`${"http://localhost:9086/login"}`, null, { params });
   // }
   
-  postData(formData: any): Observable<any> {
+  postData(formData: Usermodel): Observable<Usermodel> {
     return this.httpClient.post<any>(`${"http://localhost:9086/login"}`, formData).pipe(
     map 
       (formData =>{

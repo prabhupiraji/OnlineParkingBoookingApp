@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Params, Router } from '@angular/router';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { UserService } from '../user.service';
+import { Usermodel } from '../usermodel';
+import { UserSession } from '../usersession';
 
 @Component({
   selector: 'app-login-register',
@@ -10,24 +12,50 @@ import { UserService } from '../user.service';
 })
 
 export class LoginRegisterComponent{
-  formData: any = {};
-  // email: string ;
-  // password: string;
+  formData: Usermodel =new Usermodel(); 
+  data: any;
+
   constructor(private router: Router,  private http: HttpClient,private userService:UserService) { }
   Register(){
     this.router.navigate(['/user-register']);
   }
-  submitForm(formData:any) {
-    this.userService.postData(formData)
-      .subscribe(
-        response => {
-          // Handle the response if needed
-        },
-        error => {
-          // Handle the error if needed
+  login() {
+   
+    this.userService.postData(this.formData)
+      .subscribe((res: any)=>{
+        this.data= res;
+        // console.log(data);
+        console.log(res);
+        if(this.data != null){
+          this.router.navigate(['/user-home']);
         }
-      );
-      this.router.navigate(['/user-home']);
+        else{
+          alert("invalid user");
+          
+        }
+       
+      },
+      // alert("invalid user");
+      error=>console.log(error));
+      
+    }   
   }
+      
+
  
+
+
+
+
+function res(value: Usermodel): void {
+  throw new Error('Function not implemented.');
 }
+  // serRegister(){
+  //   // saveEmployeePersonalDetails(){
+  //     this.service.registerUser(this.usern).subscribe(data => {
+  //       console.log(data);
+  //     },
+  //     error => console.log(error));
+  //   }
+  // }
+

@@ -18,6 +18,7 @@ export class UserBookParkingComponent {
     console.log(this.bookslotuser);
     this.parkingservice.book(this.bookslotuser).subscribe(data => {
       console.log(data);
+      this.router.navigate(['/user-home']);
     },
     error => console.log(error));
     }

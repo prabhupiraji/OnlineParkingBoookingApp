@@ -7,4 +7,5 @@ export class Usermodel {
     email:String;
     dateOfBirth:Date;
     password:String;
+  userId: null;
 }
