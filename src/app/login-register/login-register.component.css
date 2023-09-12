@@ -1,7 +1,27 @@
+.buttons {
+  display: flex;
+  align-content: center;
+  gap: 10px;
+}
 
-  .buttons{
-   display: flex;
-   align-content: center;
-   gap: 10px;
-  }
+.home-container {
+  background-image: url('https://img.freepik.com/free-vector/underground-car-parking-basement-garage_107791-613.jpg?w=1380&t=st=1694523238~exp=1694523838~hmac=dc859b8cd608c5ab5dca0882c705799527db34d55f82f21c5c677615965cd3a2');
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  
+     margin-left: -213px;
+     margin-right: -213px ;
+     padding: 243px;
+
+}
+
+#home-container,
+h1,
+p {
+  color: rgb(232, 232, 238);
+}
+form{
+
+  margin-top: -20%;
+}

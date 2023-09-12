@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'admin/admin-update-cost', component: AdminUpdateCostComponent},
   {path: 'admin/admin-log-out', component: AdminLogOutComponent},
   // {path: 'view-employee-user/:userId', component: ViewEmployeeComponent}
-  {path: 'admin/admin-update-cost/:admin_id', component: AdminUpdateCostComponent},
+  {path: 'admin/admin-update-cost', component: AdminUpdateCostComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'user-register', component:RegisterComponent},
   {path: 'user-home/user-costperhr', component: UserCostperhrComponent},

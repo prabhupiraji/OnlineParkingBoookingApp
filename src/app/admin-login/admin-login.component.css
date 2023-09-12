@@ -1,0 +1,14 @@
+.home-container{
+    background-image: url('https://tse1.mm.bing.net/th?id=OIP.FkxH3mjg8cGnXTZzHPeFcAHaEo&pid=Api&P=0&h=180');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+     margin-left: -213px;
+     margin-right: -213px ;
+     padding: 189px;
+     
+  }
+  #home-container,h1,p{
+  color: rgb(232, 232, 238);
+  }
+ 

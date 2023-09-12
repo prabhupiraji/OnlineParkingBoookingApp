@@ -1,6 +1,10 @@
+<div class="home-container">
+    <h1>Online Parking Booking System</h1>
+    <p>Welcome book your car parking here</p>
+  <!-- </div> -->
 <div class="col-md-6 offset-md-3">
     <h3>Admin Login</h3>
-    <form (ngSubmit)="(submitForm(formData))">
+    <form (ngSubmit)="(submitForm())">
         <!-- <form> -->
         <div class="form-group">
             <label for="emailid">EmailId:</label>
@@ -17,5 +21,9 @@
 
         <!-- <button class="btn btn-success" type="button"> Login </button> -->
         <button class="btn btn-success"  type="submit"> Login </button>
+        <div *ngIf="error" class="error-message">
+            {{ error }}
+          </div>
     </form>
+</div>
 </div>

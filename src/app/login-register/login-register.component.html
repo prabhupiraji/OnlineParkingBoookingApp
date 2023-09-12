@@ -1,7 +1,8 @@
-<div class="col-md-6 offset-md-3">
-    <h3>User Login</h3>
-    <!-- <form (ngSubmit)="(submitForm(formData))"> -->
-        <form>
+<div class="home-container">
+    <h1>Online Parking Booking System</h1>
+    <p>Welcome book your car parking here</p>
+    <div class="col-md-4 offset-md-3">
+    <form>
         <div class="form-group">
             <label for="email">EmailId:</label>
             <input type="text" class="form-control" [(ngModel)]="formData.email" name="email" id="email"
@@ -18,10 +19,6 @@
 
             <button class="btn btn-success" (click)="Register()" type="submit"> Register </button>
         </div>
-
-
-
     </form>
-
-
+</div>
 </div>

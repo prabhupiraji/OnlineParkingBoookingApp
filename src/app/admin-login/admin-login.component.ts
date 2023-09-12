@@ -12,50 +12,73 @@ import { AdminService } from '../admin.service';
 })
 export class AdminLoginComponent {
   
-  // emailid: string;
-  // password: string;
-  // admindata: Adminmodel=new Adminmodel();
-   
+  error: string = '';
   formData: any = {}; // Object to hold the form data
+  // data: any;
+  loginMessage: String='';
+  data: any;
+  // response: Partial<Observer<any>> | ((value: any) => void) | undefined;
   constructor(private router: Router ,private http: HttpClient,private adminService: AdminService) { }
 
-  submitForm(formData: any) {
-    this.adminService.postData(formData)
-      .subscribe(
-        response => {
-          // Handle the response if needed
-        },
-        error => {
-          // Handle the error if needed
-        }
-      );
-      this.router.navigate(['/admin']);
+  
+  // submitForm() {
+  //   this.adminService.postData(this.formData)
+  //     .subscribe((response) => {
+  //       // Handle the successful login response here
+  //       console.log('Login successful:', response);
+  //       // You may want to redirect the user to a different page.
+  //       this.router.navigate(['/admin']);
+  //     });
+  //   (error: any) => {
+  //         // Handle the error if needed
+  //         console.log(error);
+  //       }
+  //     // );
+      
+  // }
+  submitForm():void {
+    this.adminService.postData(this.formData)
+      .subscribe((response:any) => {
+        // Successful login logic
+       
+        
+      
+      },
+         
+          (errorResponse) => {
+            if (errorResponse.status === 401 || errorResponse.status === 400) {
+              // Unauthorized error, set the error message
+            alert('Invalid credentials. Please try again.');
+            } else {
+              // Handle other errors here
+              alert("login sucessfull");
+              this.router.navigate(['/admin']);
+             
+              // this.error = 'An error occurred. Please try again later.';
+            }
+          }
+        );
+  // }
+ 
+      // submitFor() {
+   
+      //   this.adminService.postData(this.formData)
+      //     .subscribe((res: any)=>{
+      //       this.data= res;
+      //       // console.log(data);
+      //       console.log(res);
+      //       if(this.data != null){
+      //         this.router.navigate(['/admin']);
+      //       }
+      //       else{
+      //         alert("invalid user");
+              
+      //       }
+           
+      //     },
+      //     // alert("invalid user");
+      //     error=>console.log(error));
+          
+      //   }   
   }
-
-  // login() {
-  //   console.log(this.admindata);
-  //   this.router.navigate(['/admin']);
-  //   const params = new HttpParams()
-  //     .set('emailid', this.emailid)
-  //     .set('password', this.password);
-    
-  //     this.http.post("http://localhost:9086/loginadmin?emailid&password", {params} ).subscribe((response: any) => {
-
-  //       // Login success
-  //       console.log(response);
-  //       // Redirect to dashboard or perform other actions
-  //     },
-  //     (error: any) => {
-  //       // Login error
-  //       console.error(error);
-  //       // Display error message to the user
-  //     }
-  //   );
-  // }
-
-  // onSubmit(){
-  //   // Navigating to the 'dashboard' route
-  //      this.router.navigate(['/admin']);
-
-  // }
 }

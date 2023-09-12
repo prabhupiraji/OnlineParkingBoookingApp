@@ -4,6 +4,7 @@ import { AdminService } from '../admin.service';
 import { Parkingmodel } from '../parkingmodel';
 import { Adminmodel } from '../adminmodel';
 import { __values } from 'tslib';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin-update-cost',
@@ -11,22 +12,16 @@ import { __values } from 'tslib';
   styleUrls: ['./admin-update-cost.component.css']
 })
 export class AdminUpdateCostComponent {
-  admin_id: number;
-  admindata: Adminmodel=new Adminmodel();
-
-  // route: any;
-  // updatedData: any;
-
-  constructor(private router: Router,private service:AdminService,private route: ActivatedRoute) { }
+  admin: Adminmodel=new Adminmodel();
+  admin_id:any=1;
+  constructor(private httpClient:HttpClient,private router: Router,private aservice:AdminService,private route: ActivatedRoute) { }
  
   onSubmit(){
-   
-    console.log(this.admin_id);
-      this.service.updateAdmin(this.admin_id,this.admindata).subscribe(() => {
-        // this.goToEmployeeList();
+      this.aservice.updateAdmin(this.admin_id,this.admin).subscribe(data => {
+        alert("admin updated costperhr suceesfully");
+        this.router.navigate(['/admin']);
       }, error => console.log(error));
     }
-  
   }
   
     

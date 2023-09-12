@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../.angular"
+		},
+		{
+			"path": "../../../.vscode"
+		},
+		{
+			"path": "../../../node_modules"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "src"
+	}
+}

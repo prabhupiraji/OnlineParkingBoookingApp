@@ -47,15 +47,5 @@ export class LoginRegisterComponent{
 
 
 
-function res(value: Usermodel): void {
-  throw new Error('Function not implemented.');
-}
-  // serRegister(){
-  //   // saveEmployeePersonalDetails(){
-  //     this.service.registerUser(this.usern).subscribe(data => {
-  //       console.log(data);
-  //     },
-  //     error => console.log(error));
-  //   }
-  // }
+
 
