@@ -13,6 +13,8 @@ import { UserBookingsComponent } from './user-bookings/user-bookings.component';
 import { UserBookParkingComponent } from './user-book-parking/user-book-parking.component';
 import { UserLogoutComponent } from './user-logout/user-logout.component';
 import { UserHomeComponent } from './user-home/user-home.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -33,6 +35,8 @@ const routes: Routes = [
   {path: 'user-home/user-logout', component: UserLogoutComponent},
   {path: 'user-home/login-register', component:LoginRegisterComponent},
   {path: 'user-home', component: UserHomeComponent},
+  {path: 'aboutus', component: AboutusComponent},
+  {path: 'contactus', component: ContactusComponent},
   
 ];
 
