@@ -19,11 +19,14 @@ import { UserBookingsComponent } from './user-bookings/user-bookings.component';
 import { UserLogoutComponent } from './user-logout/user-logout.component';
 import { UserHomeComponent } from './user-home/user-home.component';
 
+
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
 // import { ViewbookingsAdminComponent } from './viewbookings-admin/viewbookings-admin.component';
 // import { ParkingmodelComponent } from './parkingmodel/parkingmodel.component';
 // import { AdminloginComponent } from './adminlogin/adminlogin.component';
@@ -33,6 +36,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     AppComponent,
     HomeComponent,
     // UserComponent,
+    ContactusComponent,
     AdminComponent,
     LoginRegisterComponent,
     RegisterComponent,
@@ -46,6 +50,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     UserLogoutComponent,
     UserHomeComponent,
     AdminLoginComponent,
+    AboutusComponent,
+    AboutusComponent,
+    ContactusComponent
     // ViewbookingsAdminComponent,
     // ParkingmodelComponent
   ],

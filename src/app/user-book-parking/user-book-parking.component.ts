@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ParkingService } from '../parking.service';
 import { Parkingmodel } from '../parkingmodel';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-user-book-parking',
@@ -10,12 +11,25 @@ import { Parkingmodel } from '../parkingmodel';
 })
 export class UserBookParkingComponent {
   bookslotuser: Parkingmodel=new Parkingmodel();
-  constructor(private router: Router,private parkingservice: ParkingService) { }
-
+  
+    id: number;
+  // userId: number;
+    // bookslotuser.id=123;
+  constructor(private router: Router,private parkingservice: ParkingService,private userservice: UserService,private route:ActivatedRoute) 
+  { 
+    this.id = this.userservice.getuser_id();
+    console.log(this.id);
+   }
+   ngOnInit(): void {
+    // this.userId = Number(this.route.snapshot.paramMap.get('userId'));
+    // throw new Error('Method not implemented.');
+  }
+   
 
   onSubmit(){
     // Navigating to the 'dashboard' route
     console.log(this.bookslotuser);
+    // this.bookslotuser.id= this.userId;
     this.parkingservice.book(this.bookslotuser).subscribe(data => {
       console.log(data);
       this.router.navigate(['/user-home']);
@@ -28,14 +42,7 @@ export class UserBookParkingComponent {
 
 
 
-  // this.router.navigate(['/user-home/user-bookings']);
-  // onSubmit(){
-  //   // Navigating to the 'dashboard' route
-  //   console.log(this.user);
-  //   this.userRegister();
-  //      this.router.navigate(['/login-register']);
-     
-  // }
+  
  
  
   

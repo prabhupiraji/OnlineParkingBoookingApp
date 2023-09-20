@@ -1,0 +1,57 @@
+/* Reset some default styles for consistency */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply some basic styling to the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    /* padding: 52px; */
+}
+
+.container {
+    max-width: 654px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+    list-style: disc;
+}
+
+/* Style the header and footer as needed */
+header {
+    background-color: #b5c837;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    background-color:#b5c837;
+    color: #fff;
+    padding: 10px 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+/* Add additional styling based on your app's branding and design guidelines */

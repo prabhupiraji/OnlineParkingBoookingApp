@@ -1,0 +1,90 @@
+/* Reset some default styles for consistency */
+body, h1, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply some basic styling to the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #15c86e;
+    line-height: 1.6;
+    background-image: url("https://pdslkenya.com/img/contact.jpg");
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: whitesmoke;
+    /* background-color: #fff; */
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #dae635;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #14bd58;
+    color: #fff;
+    padding: 10px 20px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style the header and footer as needed */
+header {
+    /* background-color: #b5c837; */
+    background-color: rgb(21, 175, 218);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    background-color:rgb(21, 175, 218);
+    color: #fff;
+    padding-top:  10px;
+    text-align: center;
+}
+
+/* Add additional styling based on your app's branding and design guidelines */

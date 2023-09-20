@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Params, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { UserService } from '../user.service';
 import { Usermodel } from '../usermodel';
@@ -14,13 +14,18 @@ import { UserSession } from '../usersession';
 export class LoginRegisterComponent{
   formData: Usermodel =new Usermodel(); 
   data: any;
+  userId: number;
 
-  constructor(private router: Router,  private http: HttpClient,private userService:UserService) { }
+  constructor(private router: Router,  private http: HttpClient,private userService:UserService,private route:ActivatedRoute) { }
+  ngOnInit(): void {
+    // this.userId = Number(this.route.snapshot.paramMap.get('userId'));
+    throw new Error('Method not implemented.');
+  }
   Register(){
     this.router.navigate(['/user-register']);
   }
   login() {
-   
+    // this.formData.id= this.userId;
     this.userService.postData(this.formData)
       .subscribe((res: any)=>{
         this.data= res;
