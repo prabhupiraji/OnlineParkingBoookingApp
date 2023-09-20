@@ -1,24 +1,26 @@
 <div class="home-container">
     <h1>Online Parking Booking System</h1>
-    <p>book your car parking here</p>
-    <div class="col-md-4 offset-md-3">
+    <div class="container">
+        <h2>Book your car parking here</h2>
+    <div class="col-md-6 offset-md-3">
     <form>
         <div class="form-group">
-            <label for="email">EmailId:</label>
+            <label for="email" class="labels">EmailId:</label>
             <input type="text" class="form-control" [(ngModel)]="formData.email" name="email" id="email"
                 placeholder="email" value="email" required>
         </div>
 
         <div class="form-group">
-            <label for="password">Password:</label>
+            <label for="password" class="labels">Password:</label>
             <input type="text" class="form-control" [(ngModel)]="formData.password" name="password" id="password"
                 placeholder="password" value="password" required>
         </div>
         <div class="buttons">
-            <button class="btn btn-success" (click)="login()" type="submit"> Login </button><br>
-
-            <button class="btn btn-success" (click)="Register()" type="submit"> Register </button>
+        <div><button class="btn btn-success" (click)="login()" type="submit" style="background-color: rgba(218, 51, 176, 0.901);"> Login </button>
+        </div>
+        <div><button class="btn btn-success" (click)="Register()" type="submit" > NewUserRegister </button></div>
         </div>
     </form>
+</div>
 </div>
 </div>
