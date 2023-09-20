@@ -8,15 +8,18 @@ body, h1, p, label, input, textarea, button {
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    color: #333;
+    color: #15c86e;
     line-height: 1.6;
+    background-image: url("https://pdslkenya.com/img/contact.jpg");
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    color: whitesmoke;
+    /* background-color: #fff; */
+    background-color: transparent;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
@@ -24,7 +27,7 @@ body {
 h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #333;
+    color: #dae635;
 }
 
 p {
@@ -59,9 +62,10 @@ textarea {
 }
 
 button {
-    background-color: #333;
+    background-color: #14bd58;
     color: #fff;
     padding: 10px 20px;
+    width: 50%;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -69,14 +73,15 @@ button {
 
 /* Style the header and footer as needed */
 header {
-    background-color: #b5c837;
+    /* background-color: #b5c837; */
+    background-color: rgb(21, 175, 218);
     color: #fff;
     padding: 10px 0;
     text-align: center;
 }
 
 footer {
-    background-color: #b5c837;
+    background-color:rgb(21, 175, 218);
     color: #fff;
     padding-top:  10px;
     text-align: center;
