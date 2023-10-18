@@ -1,0 +1,38 @@
+.container{
+width: 50% auto;
+padding: 20px;
+background-color: white;
+border: solid 3px;
+padding-top: 10px;
+/* background: linear-gradient(#2196f3, #e91e63); */
+/* border-color: black ; */
+}
+#container,h2,label{
+color: black;
+text-align: center;
+
+}
+#container,button{ 
+    background-color: #14bd58;
+    color:white;
+    padding: 10px 20px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+#container,h2{
+    color: #14bd58;
+    
+}
+.labels::after {
+    content: " *";
+    color: red;
+    font-size: 18px;
+}
+input{
+    /* color: #14bd58; */
+    border: solid 1px;
+}
+

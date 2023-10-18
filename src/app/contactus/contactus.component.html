@@ -5,36 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Surya Parking</title>
     <link rel="stylesheet" href="contactus.component.css"> <!-- Link to your app's CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <!-- Include your app's header here -->
         we are eager to here from you    
+        <div class="home__social">
+            <a href="https://www.linkedin.com/in/prabhu-piraji-1979351a7/" class="home__social-icon"><i
+                    class='bx bxl-linkedin'></i></a>
+            <!-- <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a> -->
+            <a href="https://www.facebook.com/prabhu.piraji" class="home__social-icon"><i
+                    class='bx bxl-facebook'></i></a>
+            <a href="https://github.com/prabhupiraji" class="home__social-icon"><i class='bx bxl-github'></i></a>
+        </div>
+        <!-- <b>Landmark: Opposite Beauty Trips or Beyond Health medical store</b><br> -->
+        Phone: <a href="tel: (+91) 9901381372" style="position: relative; color: whitesmoke;"> | (+91) 9901381372</a>
+        <b>
+            <!-- <input type="text" id="location" readonly> -->
+        <!-- <button id="getLocation">Get Location</button> -->
+          <a href="https://www.google.com/maps/place/Sedol+Bus+Stop/@17.8490673,77.1403527,17z/data=!4m8!3m7!1s0x3bcf2653e05937a1:0x94d2a0177a9825cd!8m2!3d17.8490622!4d77.1429276!9m1!1b1!16s%2Fg%2F12hlzbmz0?entry=ttu" target="_blank" style="color: whitesmoke
+          ; margin-left: 20px;">Live Location</a> 
+        </b>
     </header>
 
     <main>
+        
         <section id="contact-us">
             <div class="container">
+                
                 <h1>Contact Us</h1>
                 <p>If you have any questions, feedback, or need assistance, please don't hesitate to get in touch with us.</p>
                 <div class="contact-form">
                     <form  class="formData">
-                        <label for="name">Name:</label>
-                        <input type="text"  [(ngModel)]= formData.name id="name" name="name" required>
+                        <label for="name" class="labels">Name:</label>
+                        <input type="text"  [(ngModel)]= formData.name id="nameerror" name="name" required class="error">
 
-                        <label for="email">Email:</label>
-                        <input type="email" [(ngModel)]= formData.email id="email" name="email" required>
+                        <label for="email" class="labels">Email:</label>
+                        <input type="email" [(ngModel)]= formData.email id="email" name="email" required class="error">
 
-                        <label for="message">Message:</label>
-                        <textarea  [(ngModel)]= formData.message id="message" name="message" rows="6" required></textarea>
-
+                        <label for="message" class="labels">Message:</label>
+                        <textarea  [(ngModel)]= formData.message id="message" name="message" rows="6" required class="error"></textarea>
                         <button type="submit" (click)="RegisterQuery()">Submit</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
         <!-- Include your app's footer here -->
         all rights are reserved to @Surya parking

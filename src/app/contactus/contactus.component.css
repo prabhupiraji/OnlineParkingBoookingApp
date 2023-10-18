@@ -8,13 +8,17 @@ body, h1, p, label, input, textarea, button {
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    margin-left: -216px;
+    margin-right: -213px;
+    /* background-size: cover; */
     color: #15c86e;
     line-height: 1.6;
     background-image: url("https://pdslkenya.com/img/contact.jpg");
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
+    /* width: fit-content; */
     margin: 0 auto;
     padding: 20px;
     color: whitesmoke;
@@ -63,6 +67,7 @@ textarea {
 
 button {
     background-color: #14bd58;
+    background: linear-gradient(green, #e91e63);
     color: #fff;
     padding: 10px 20px;
     width: 50%;
@@ -76,7 +81,7 @@ header {
     /* background-color: #b5c837; */
     background-color: rgb(21, 175, 218);
     color: #fff;
-    padding: 10px 0;
+    padding: 11px 0;
     text-align: center;
 }
 
@@ -84,7 +89,38 @@ footer {
     background-color:rgb(21, 175, 218);
     color: #fff;
     padding-top:  10px;
+    padding: 11px;
     text-align: center;
+
 }
 
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#2196f3, #e91e63);
+    overflow: hidden;
+} */
 /* Add additional styling based on your app's branding and design guidelines */
+
+.labels::after{
+    content: " *";
+    color: red;
+    font-size: 18px;
+}
+.home__social {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home__social-icon {
+    width: max-content;
+    margin-bottom: var(--mb-2);
+    font-size: 1.5rem;
+    color: var(--second-color);
+  }
+  
+  .home__social-icon:hover {
+    color: var(--first-color);
+  }

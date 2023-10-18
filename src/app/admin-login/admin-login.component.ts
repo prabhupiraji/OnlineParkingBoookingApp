@@ -17,6 +17,9 @@ export class AdminLoginComponent {
   // data: any;
   loginMessage: String='';
   data: any;
+  formSubmitted: boolean;
+  emailid:'';
+  password='';
   // response: Partial<Observer<any>> | ((value: any) => void) | undefined;
   constructor(private router: Router ,private http: HttpClient,private adminService: AdminService) { }
 
@@ -36,7 +39,8 @@ export class AdminLoginComponent {
   //     // );
       
   // }
-  submitForm():void {
+  submitForm() {
+    this.formSubmitted = true;
     this.adminService.postData(this.formData)
       .subscribe((response:any) => {
         // Successful login logic

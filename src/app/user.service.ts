@@ -10,15 +10,27 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UserService {
+  user_id: number;
   // logoutUrl: string;
   constructor(private httpClient: HttpClient,private router:Router) { }
 
+  setuserId(userId: number) {
+    this.user_id = userId;
+  }
+
+  getuser_id() {
+    return this.user_id;
+  }
   private baseURL = "http://localhost:9086/userregister";
    private URL="http://localhost:9086/listofbookings";
   private logoutUrl = "http://localhost:9086/logout";
+  private queryUrl= "http://localhost:9086/sendquery";
  
   registerUser(user: Usermodel): Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`, user);
+  }
+  getCustomerQuery(user: Usermodel): Observable<Object>{
+    return this.httpClient.post(`${this.queryUrl}`, user);
   }
   
   getbookingist(): Observable<Parkingmodel[]>{
@@ -27,10 +39,7 @@ export class UserService {
 
 
  
-  // postData(formData: any): Observable<any> {
-  //   const params = new HttpParams({ fromObject: formData });
-  //   return this.httpClient.post<any>(`${"http://localhost:9086/login"}`, null, { params });
-  // }
+ 
   
   postData(formData: Usermodel): Observable<Usermodel> {
     return this.httpClient.post<any>(`${"http://localhost:9086/login"}`, formData).pipe(
@@ -42,17 +51,8 @@ export class UserService {
   })
   );
 }
-  
-  // logout(email: string, password: string): Observable<any> {
-  //   return this.httpClient.post(this.logoutUrl, { email, password });
-  // }
- 
-  // logout(sessionId: string): Observable<any> {
-  //   const surl = `http://localhost:9086/logout/{sessionId}`;
-  //   return this.httpClient.post<any>(surl, {sessionStorage});
-  //   // return this.httpClient.post<any>(this.logoutUrl, sessionId);
-    
-  // }
+
+
   logout(sessionId: string) {
     const url = `${this.logoutUrl}/{sessionId}`;
     return this.httpClient.post<void>(url, {});

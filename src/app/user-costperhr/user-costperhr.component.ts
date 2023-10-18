@@ -11,11 +11,13 @@ import { Adminmodel } from '../adminmodel';
 
 export class UserCostperhrComponent {
   // constructor(private router: Router) { }
-  admin_id: number;
+  // admin_id: number;
+  // user_id=any;
   admin: Adminmodel=new Adminmodel();
 
 //   onSubmit(){
 //     // Navigating to the 'dashboard' route
 //        this.router.navigate(['/user-book-parking']);
 // }
+
 }
