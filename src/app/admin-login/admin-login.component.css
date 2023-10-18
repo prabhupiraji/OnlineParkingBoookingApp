@@ -1,14 +1,50 @@
 .home-container{
-    background-image: url('https://tse1.mm.bing.net/th?id=OIP.FkxH3mjg8cGnXTZzHPeFcAHaEo&pid=Api&P=0&h=180');
+    /* background-image: url('https://tse1.mm.bing.net/th?id=OIP.FkxH3mjg8cGnXTZzHPeFcAHaEo&pid=Api&P=0&h=180'); */
+    background: linear-gradient(rgb(26, 207, 101), rgb(255, 0, 106));
     background-repeat: no-repeat;
     background-size: cover;
     
-     margin-left: -213px;
-     margin-right: -213px ;
-     padding: 189px;
+     margin-left: -214px;
+     margin-right: -214px ;
+     padding: 88px;
      
   }
-  #home-container,h1,p{
+  #home-container,h1,p,h3,label{
   color: rgb(232, 232, 238);
+  text-align: center;
   }
- 
+ formgroup.label{
+    background-color: white;
+ }
+ .container{
+    /* background-color: rgb(21, 175, 218); */
+    background-color:white;
+    /* background: linear-gradient(rgb(26, 207, 101), rgb(255, 0, 106)); */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-shadow: inset;
+    width: 55%;
+    border-radius: 5px
+  ;
+ }
+ input{
+   background-color: white;
+   border: solid 1px;
+   border-radius: 2px;
+ }
+ h1,p{
+   color:line;
+   /* background: linear-gradient(black green); */
+
+ }
+ .labels::after{
+   content: " *";
+   font-size: 20px;
+   color: red;
+ }
+ label,h3{
+  color: black;
+ }
+ button{
+  width: 40%;
+ }

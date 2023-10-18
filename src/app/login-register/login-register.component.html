@@ -1,24 +1,50 @@
 <div class="home-container">
     <h1>Online Parking Booking System</h1>
-    <p>book your car parking here</p>
-    <div class="col-md-4 offset-md-3">
-    <form>
+    <!-- <body> -->
+        
+ 
+    <div class="container">
+        <h2>Login</h2>
+    <div class="col-md-6 offset-md-3">
+    <form (ngSubmit)="login()">
         <div class="form-group">
-            <label for="email">EmailId:</label>
-            <input type="text" class="form-control" [(ngModel)]="formData.email" name="email" id="email"
-                placeholder="email" value="email" required>
+            <label for="email" class="labels">EmailId:</label>
+            <input type="email" class="form-control" [(ngModel)]="formData.email" name="email" id="email" 
+                placeholder="email" value="email" required #email="ngModel" email>
+                <div class="error-message" *ngIf="formSubmitted && (email?.errors?.['required'])">
+                    <span>Email is required.</span>
+                </div>
+                <div class="error-message" *ngIf="formSubmitted && (email?.errors?.['email'])">
+                    <span>Invalid email format.</span>
+                </div>
         </div>
 
         <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="text" class="form-control" [(ngModel)]="formData.password" name="password" id="password"
-                placeholder="password" value="password" required>
+            <label for="password" class="labels">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="formData.password" name="password" id="password"
+                placeholder="password" value="password" required #password="ngModel" password>
+                <div class="error-message" *ngIf="formSubmitted && (password?.errors?.['required'])">
+                    <span>Password is required.</span>
+                </div>
+                <div class="error-message" *ngIf="formSubmitted && (password?.errors?.['minlength'])">
+                    <span>Password must be at least 8 characters long.</span>
+                </div>
+                     
+        </div>
+        <div class="forgot-pass">
+            <a href="#">Forgot Password?</a>
         </div>
         <div class="buttons">
-            <button class="btn btn-success" (click)="login()" type="submit"> Login </button><br>
-
-            <button class="btn btn-success" (click)="Register()" type="submit"> Register </button>
+        <div><button class="btn btn-success"  type="submit" style="background-color: rgba(218, 51, 176, 0.901);"> Login </button>
         </div>
+        <div class="sign-link">
+            <p>Don't have an account? <a href="user-register" class="signUp-link">Sign Up</a></p>
+        </div>
+    </div>
+
+        
     </form>
 </div>
+</div>
+<!-- </body> -->
 </div>

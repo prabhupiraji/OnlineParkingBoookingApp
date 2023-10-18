@@ -1,82 +1,72 @@
 <div class="col-md-6 offset-md-3">
-    <h3>Book Slot</h3>
-    <form (ngSubmit)="onSubmit()">
-     <!-- <form> -->
-      <div class="form-group">
-        <label>UserId:</label>
-        <input type="number" class="form-control" [(ngModel)]="bookslotuser.id" id="user_id"
-           name="user_id">
-    </div>
-        <div class="form-group">
-            <label>Date:</label>
-            <input type="date" class="form-control" [(ngModel)]="bookslotuser.parkingdate" id="date"
-               name="date">
-        </div>
-    
-        <div class="form-group">
-            <label>StartTime:</label>
-            <input type="text" class="form-control" [(ngModel)]="bookslotuser.parkingtime" id="StartTime"
-               name="userCallName">
-         </div> 
-        <div class="form-group">
-          <label>ParkingEndTime:</label>
-          <input type="text" class="form-control"  [(ngModel)]="bookslotuser.parkingendTime" id="parkingendTime"
-             name="StartTime">
-      </div> 
-        <div class="form-group">
-            <label>Parking hours:</label>
-            <input type="text" class="form-control" [(ngModel)]="bookslotuser.parkinghours" id="parkinghours"
-               name="parkinghours">
-        </div>
-        <div class="form-group">
-            <label>Parking cost in rupees:</label>
-            <input type="number" class="form-control"  [(ngModel)]="bookslotuser.costRupees" id="costRupees"
-               name="costRupees">
-        </div>
-       
-        <div class="form-group">
-          <label>Slot Name:</label>
-          <input type="text" class="form-control"  [(ngModel)]="bookslotuser.slotname" id="slotname"
-             name="slotname">
-      </div>
-      <div class="form-group">
-        <label>Booking Time:</label>
-        <input type="datetime-local" class="form-control"  [(ngModel)]="bookslotuser.bookingTime" id="bookingTime"
-           name="bookingTime">
+<body>
+  
 
-
+  <h1>Book Your Parking Slot</h1>
+  <form (ngSubmit)="onSubmit()">
+    <!-- <form> -->
+    <div class="form-group">
+      <label class="labels">UserId:</label>
+      <input type="number" class="form-control" [(ngModel)]="bookslotuser.id" name="user_id"  required>
     </div>
-    <!-- <mat-form-field>
-      <input matInput [matDatepicker]="datepicker" placeholder="Select a date">
-      <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
-      <mat-datepicker #datepicker></mat-datepicker>
-    </mat-form-field> -->
-    
-        <div class="form-group">
-            <label>Payment Mode:</label>
-            <!-- <form> -->
-                <fieldset>
-                  <!-- <legend>Please select your preferred contact method:</legend> -->
-                  <div>
-                    <input type="radio" id="contactChoice1" name="contact" value="email" />
-                    <label for="contactChoice1">UPI</label>
-              
-                    <input type="radio" id="contactChoice2" name="contact" value="phone" />
-                    <label for="contactChoice2">Card</label>
-              
-                    <input type="radio" id="contactChoice3" name="contact" value="mail" />
-                    <label for="contactChoice3">BankAcount</label>
-                    
-                  </div>
-                </fieldset>
-              <!-- </form> -->
+    <div class="form-group">
+      <label class="labels">Date:</label>
+      <input type="date" class="form-control" [(ngModel)]="bookslotuser.parkingdate" id="date" name="date" required>
+    </div>
+
+    <div class="form-group">
+      <label class="labels">StartTime:</label>
+      <input type="text" class="form-control" [(ngModel)]="bookslotuser.parkingtime" id="StartTime" name="userCallName" required>
+    </div>
+    <div class="form-group">
+      <label class="labels">ParkingEndTime:</label>
+      <input type="text" class="form-control" [(ngModel)]="bookslotuser.parkingendTime" id="parkingendTime"
+        name="StartTime" required>
+    </div>
+    <div class="form-group">
+      <label class="labels">Parking hours:</label>
+      <input type="text" class="form-control" [(ngModel)]="bookslotuser.parkinghours" id="parkinghours"
+        name="parkinghours" required>
+    </div>
+    <div class="form-group">
+      <label class="labels">Parking cost in rupees:</label>
+      <input type="number" class="form-control" [(ngModel)]="bookslotuser.costRupees" id="costRupees" name="costRupees" required>
+    </div>
+
+    <div class="form-group">
+      <label class="labels">Slot Name:</label>
+      <input type="text" class="form-control" [(ngModel)]="bookslotuser.slotname" id="slotname" name="slotname" required>
+    </div>
+    <div class="form-group">
+      <label class="labels">Booking Time:</label>
+      <input type="datetime-local" class="form-control" [(ngModel)]="bookslotuser.bookingTime" id="bookingTime"
+      name="bookingTime" required>
+    </div>
+   
+
+    <div class="form-group">
+      <label class="labels">Payment Mode:</label>
+      <!-- <form> -->
+      <fieldset>
+        <!-- <legend>Please select your preferred contact method:</legend> -->
+        <div>
+          <input type="radio" id="contactChoice1" name="contact" value="email" />
+          <label for="contactChoice1">UPI</label>
+
+          <input type="radio" id="contactChoice2" name="contact" value="phone" />
+          <label for="contactChoice2">Card</label>
+
+          <input type="radio" id="contactChoice3" name="contact" value="mail" />
+          <label for="contactChoice3">BankAcount</label>
+
         </div>
-    
-        
-        <button class="btn btn-success"  type="submit"> Book </button>
-      
-    </form>
+      </fieldset>
+      <!-- </form> -->
     </div>
 
 
+    <button class="btn btn-success" type="submit"> Book </button>
 
+  </form>
+</body>
+</div>

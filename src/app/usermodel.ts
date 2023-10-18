@@ -1,5 +1,5 @@
 export class Usermodel {
-    user_id:number;
+    id:number;
     name:String;
     adress:String;
     phoneno:String;
@@ -7,5 +7,6 @@ export class Usermodel {
     email:String;
     dateOfBirth:Date;
     password:String;
-  userId: null;
+  // userId: number;
+  message:string
 }

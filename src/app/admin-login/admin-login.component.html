@@ -1,29 +1,36 @@
 <div class="home-container">
     <h1>Online Parking Booking System</h1>
-    <p>book your car parking here</p>
-  <!-- </div> -->
+    <!-- <p>book your car parking here</p> -->
+<div class="container">
 <div class="col-md-6 offset-md-3">
     <h3>Admin Login</h3>
     <form (ngSubmit)="(submitForm())">
         <!-- <form> -->
         <div class="form-group">
-            <label for="emailid">EmailId:</label>
-            <input type="text" class="form-control" [(ngModel)]="formData.emailid" name="email" placeholder="emailid"
-                id="emailid">
+            <label for="emailid" class="labels">EmailId:</label>
+            <input type="email" class="form-control" [(ngModel)]="formData.emailid" name="email" placeholder="emailid"
+                id="emailid" #email="ngModel"  required email>
+                <div class="error-message" *ngIf="formSubmitted && (email?.errors?.['required'])">
+                    <span>Email is required</span>
+                </div>
+                <div class="error-message" *ngIf="formSubmitted && (email?.errors?.['email'])">
+                    <span>Email invalid format</span>
+                </div>
         </div>
 
         <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="text" class="form-control" [(ngModel)]="formData.password" name="password" placeholder="password"
-                id="password">
+            <label for="password" class="labels">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="formData.password" name="password"
+                placeholder="password" id="password" #password="ngModel" required password>
+                <div class="error-message" *ngIf="formSubmitted && (password?.errors?.['required'])">
+                    <span>password is required</span>
+                </div>
+                <div class="error-message" *ngIf="formSubmitted && (password?.errors?.['password'])">
+                    <span>password invalid format</span>
+                </div>
         </div>
-
-
-        <!-- <button class="btn btn-success" type="button"> Login </button> -->
-        <button class="btn btn-success"  type="submit"> Login </button>
-        <div *ngIf="error" class="error-message">
-            {{ error }}
-          </div>
+        <button class="btn btn-success" type="submit"> Login </button>
     </form>
+</div>
 </div>
 </div>

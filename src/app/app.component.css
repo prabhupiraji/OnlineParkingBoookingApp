@@ -1,1 +1,18 @@
+.navbar ,navbar-expand-sm ,bg-dark ,navbar-dark{
+    color: aqua;
+    background-color: aquamarine;
+}
+.logo {
+    position: absolute;
+    top: 0px; 
+    right: 1px; /* Adjust this value to position horizontally */
+    background:transparent;
+}
 
+ @media (max-width: 768px) {
+    .logo {
+        position: static; /* Reset position for smaller screens */
+        display: block;
+        margin: 0 auto; 
+     } 
+}  

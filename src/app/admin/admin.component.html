@@ -1,23 +1,23 @@
 <div class="home-container">
-    <h1>Online Parking Booking System</h1>
-    <p> book your car parking here</p>
+     <h1>Online Parking Booking System</h1>
+    <!-- <p> book your car parking here</p> -->
 <div>
 <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> -->
     <ul class="navbar-nav">
+    
         <li class="nav-item">
-            <a routerLink="/admin" routerLinkActive="active" >AdminHome</a>
-        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-            <a routerLink="admin-view-bookings" routerLinkActive="active">ViewBokings</a>
+            <a routerLink="admin-view-bookings" routerLinkActive="active" style="color: whitesmoke;">ViewBokings</a>
         </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         <li class="nav-item">
-            <a routerLink="admin-update-cost" routerLinkActive="active">UpdateCost</a>
+            <a routerLink="admin-update-cost" routerLinkActive="active" style="color: whitesmoke;">UpdateCost</a>
         </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-        <li class="nav-item">
-            <a routerLink="/" routerLinkActive="active">Logout</a>
-        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <li class="nav-item">
+            <a routerLink="/" routerLinkActive="active" style="color: whitesmoke;">Logout</a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        
+        <button class="btn btn-danger" style="width: 8%;" (click)="logout()">Logout</button>
     </ul> 
    
   <!-- </nav> -->

@@ -1,7 +1,22 @@
-.buttons {
-  display: flex;
+.btn {
+  /* display: flex;
   align-content: center;
   gap: 10px;
+  cursor: pointer;
+  position: relative; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #2196f3, #e91e63);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
 
 .home-container {
@@ -9,19 +24,87 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  
-     margin-left: -213px;
-     margin-right: -213px ;
-     padding: 243px;
-
+  margin-left: -213px;
+  margin-right: -213px;
+  padding: 111px;
 }
 
 #home-container,
-h1,
-p {
-  color: rgb(232, 232, 238);
+h1,h2,
+p ,label{
+  color: white;
+  /* position: c; */
+  text-align: center;
 }
-form{
+h1{
+color: #dae635;
+margin-top: 0px;
+}
+form {
 
-  margin-top: -20%;
+  /* margin-top: -20%; */
+}
+
+.container {
+  /* background-color: transparent; */
+  background: linear-gradient(white,white);
+  /* background-color: rgba(255, 255, 255, 0.905); */
+  padding-top: 50px;
+  padding-bottom: 100px;
+   width: 50%;
+  box-shadow: inset;
+  border: solid rgb(20, 190, 199) 5px;
+  border: solid  whitesmoke 2px;
+  border-radius: 10px;
+
+}
+input{
+  border: solid 2px;
+  border-radius: 5px;
+}
+.labels::after{
+  content: " *";
+  font-size: 18px;
+  color: red;
+}
+label{
+  color: black;
+  font-size: medium;
+}
+h2{
+  color:black;
+}
+.forgot-pass {
+  margin: -15px 0 15px;
+  
+}
+
+.forgot-pass a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.forgot-pass a:hover {
+  text-decoration: underline;
+}
+.sign-link {
+  font-size: 14px;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.sign-link p {
+  color: #161616;
+  font-size: medium;
+}
+
+.sign-link p a {
+  color: #1ee991;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sign-link p a:hover {
+  text-decoration: underline;
 }

@@ -29,6 +29,7 @@ const routes: Routes = [
   {path: 'admin/admin-update-cost', component: AdminUpdateCostComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'user-register', component:RegisterComponent},
+  {path: 'login-register/:userId', component:LoginRegisterComponent},
   {path: 'user-home/user-costperhr', component: UserCostperhrComponent},
   {path: 'user-home/user-bookings', component: UserBookingsComponent},
   {path: 'user-home/user-book-parking', component: UserBookParkingComponent},
@@ -37,7 +38,8 @@ const routes: Routes = [
   {path: 'user-home', component: UserHomeComponent},
   {path: 'aboutus', component: AboutusComponent},
   {path: 'contactus', component: ContactusComponent},
-  
+  {path: 'contactus/home', component: HomeComponent},
+  {path: 'contactus/user-home', component: UserHomeComponent}
 ];
 
 @NgModule({
