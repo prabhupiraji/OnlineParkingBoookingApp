@@ -11,5 +11,6 @@ export class Parkingmodel {
      slotname:String
      bookingTime:Time
      id:number
-     UserModel:any
+     userId:number
+     // UserModel:any
 }

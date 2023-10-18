@@ -1,0 +1,9 @@
+body{
+    border: solid 1px;
+    padding: 20px;
+}
+.labels::after{
+    color:red;
+    content: " *";
+    font-size: 18px;
+}

@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { LoginRegisterComponent } from './login-register/login-register.component';
 import { RegisterComponent } from './user-register/register.component';
-import { FormBuilder, FormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminViewBookingsComponent } from './admin-view-bookings/admin-view-bookings.component';
 import { AdminUpdateCostComponent } from './admin-update-cost/admin-update-cost.component';
@@ -52,9 +52,7 @@ import { ContactusComponent } from './contactus/contactus.component';
     AdminLoginComponent,
     AboutusComponent,
     AboutusComponent,
-    ContactusComponent
-    // ViewbookingsAdminComponent,
-    // ParkingmodelComponent
+    ContactusComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,10 +60,12 @@ import { ContactusComponent } from './contactus/contactus.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    // FormBuilder
+    // FormBuilder,
+    ReactiveFormsModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

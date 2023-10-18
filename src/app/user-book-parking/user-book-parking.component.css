@@ -1,1 +1,16 @@
-
+body{
+    border: solid 1px;
+    padding: 20px;
+}
+.labels::after{
+    content: " *";
+    color: red;
+    font-size: 18px;
+}
+button{
+    /* padding: 20px; */
+    width: 40%;
+}
+h1{
+    text-align: center;
+}
